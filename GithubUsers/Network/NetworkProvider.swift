@@ -22,20 +22,19 @@ public final class NetworkProvider: NetworkRequestable {
     // MARK: - Functions
     
     public func request(_ endpoint: RequestEndpoint) -> Single<RequestResult> {
-        Single.create { [session] observer in
+        Single.create { [weak session] observer in
             
             var request = URLRequest(url: endpoint.baseURL)
             request.httpMethod = endpoint.method.rawValue
 
-            let task: URLSessionDataTask = session
-                .dataTask(with: request) { data, _, error in
-                    print(data ?? "")
-                }
+            let task = session?.dataTask(with: request) { data, _, error in
+                print(data ?? "")
+            }
             
-            task.resume()
+            task?.resume()
             
             return Disposables.create {
-                task.cancel()
+                task?.cancel()
             }
         }
     }
