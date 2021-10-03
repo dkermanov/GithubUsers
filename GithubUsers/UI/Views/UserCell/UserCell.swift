@@ -20,7 +20,7 @@ public final class UserCell: UITableViewCell {
     private lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(
-            ofSize: 16.0,
+            ofSize: 18.0,
             weight: .regular
         )
         label.numberOfLines = 0
