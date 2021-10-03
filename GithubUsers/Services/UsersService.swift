@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-public final class UsersService: UsersServiceInterface {
+public final class UsersService: UsersServiceProtocol {
     // MARK: - Properties
 
     private let network: NetworkRequestable

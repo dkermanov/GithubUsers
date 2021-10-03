@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3CCEC1132709DA5A00AFAC3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC1122709DA5A00AFAC3C /* AppDelegate.swift */; };
-		3CCEC1172709DA5A00AFAC3C /* GithubUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC1162709DA5A00AFAC3C /* GithubUsersViewController.swift */; };
+		3CCEC1172709DA5A00AFAC3C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC1162709DA5A00AFAC3C /* UsersViewController.swift */; };
 		3CCEC11F2709DA6100AFAC3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCEC11D2709DA6100AFAC3C /* LaunchScreen.storyboard */; };
 		3CCEC1292709F40E00AFAC3C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3CCEC1282709F40E00AFAC3C /* RxCocoa */; };
 		3CCEC12B2709F40E00AFAC3C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 3CCEC12A2709F40E00AFAC3C /* RxRelay */; };
@@ -26,14 +26,17 @@
 		3CCEC14A270A2C5200AFAC3C /* DecoderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC149270A2C5200AFAC3C /* DecoderProtocol.swift */; };
 		3CCEC14C270A332300AFAC3C /* UsersServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14B270A332300AFAC3C /* UsersServiceError.swift */; };
 		3CCEC14E270A413E00AFAC3C /* NetworkProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14D270A413E00AFAC3C /* NetworkProviderError.swift */; };
-		3CCEC150270A464E00AFAC3C /* UsersServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14F270A464E00AFAC3C /* UsersServiceInterface.swift */; };
+		3CCEC150270A464E00AFAC3C /* UsersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14F270A464E00AFAC3C /* UsersServiceProtocol.swift */; };
 		3CCEC152270A46D400AFAC3C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC151270A46D400AFAC3C /* Repository.swift */; };
+		3CCEC157270A4B1500AFAC3C /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC156270A4B1500AFAC3C /* UsersViewModel.swift */; };
+		3CCEC159270A4B5900AFAC3C /* UsersViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC158270A4B5900AFAC3C /* UsersViewModelProtocol.swift */; };
+		3CCEC15B270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC15A270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CCEC10F2709DA5A00AFAC3C /* GithubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCEC1122709DA5A00AFAC3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CCEC1162709DA5A00AFAC3C /* GithubUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersViewController.swift; sourceTree = "<group>"; };
+		3CCEC1162709DA5A00AFAC3C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		3CCEC11E2709DA6100AFAC3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCEC1202709DA6100AFAC3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CCEC12F2709F6B600AFAC3C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -49,8 +52,11 @@
 		3CCEC149270A2C5200AFAC3C /* DecoderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderProtocol.swift; sourceTree = "<group>"; };
 		3CCEC14B270A332300AFAC3C /* UsersServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServiceError.swift; sourceTree = "<group>"; };
 		3CCEC14D270A413E00AFAC3C /* NetworkProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderError.swift; sourceTree = "<group>"; };
-		3CCEC14F270A464E00AFAC3C /* UsersServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServiceInterface.swift; sourceTree = "<group>"; };
+		3CCEC14F270A464E00AFAC3C /* UsersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServiceProtocol.swift; sourceTree = "<group>"; };
 		3CCEC151270A46D400AFAC3C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		3CCEC156270A4B1500AFAC3C /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		3CCEC158270A4B5900AFAC3C /* UsersViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelProtocol.swift; sourceTree = "<group>"; };
+		3CCEC15A270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +92,13 @@
 		3CCEC1112709DA5A00AFAC3C /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				3CCEC153270A4A7500AFAC3C /* UI */,
 				3CCEC143270A270D00AFAC3C /* Models */,
 				3CCEC140270A243500AFAC3C /* Services */,
 				3CCEC1332709FC1400AFAC3C /* Network */,
 				3CCEC12E2709F66800AFAC3C /* Coordinator */,
 				3CCEC1262709DF4A00AFAC3C /* Resources */,
 				3CCEC1122709DA5A00AFAC3C /* AppDelegate.swift */,
-				3CCEC1162709DA5A00AFAC3C /* GithubUsersViewController.swift */,
 			);
 			path = GithubUsers;
 			sourceTree = "<group>";
@@ -140,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCEC141270A245000AFAC3C /* UsersService.swift */,
-				3CCEC14F270A464E00AFAC3C /* UsersServiceInterface.swift */,
+				3CCEC14F270A464E00AFAC3C /* UsersServiceProtocol.swift */,
 				3CCEC14B270A332300AFAC3C /* UsersServiceError.swift */,
 			);
 			path = Services;
@@ -163,6 +169,33 @@
 				3CCEC149270A2C5200AFAC3C /* DecoderProtocol.swift */,
 			);
 			path = Decoder;
+			sourceTree = "<group>";
+		};
+		3CCEC153270A4A7500AFAC3C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC154270A4A8A00AFAC3C /* Users */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3CCEC154270A4A8A00AFAC3C /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC155270A4AFC00AFAC3C /* ViewModel */,
+				3CCEC1162709DA5A00AFAC3C /* UsersViewController.swift */,
+				3CCEC15A270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		3CCEC155270A4AFC00AFAC3C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC156270A4B1500AFAC3C /* UsersViewModel.swift */,
+				3CCEC158270A4B5900AFAC3C /* UsersViewModelProtocol.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,19 +277,22 @@
 			files = (
 				3CCEC1322709F72500AFAC3C /* AppCoordinator.swift in Sources */,
 				3CCEC142270A245000AFAC3C /* UsersService.swift in Sources */,
+				3CCEC15B270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift in Sources */,
 				3CCEC14C270A332300AFAC3C /* UsersServiceError.swift in Sources */,
-				3CCEC1172709DA5A00AFAC3C /* GithubUsersViewController.swift in Sources */,
+				3CCEC1172709DA5A00AFAC3C /* UsersViewController.swift in Sources */,
 				3CCEC1132709DA5A00AFAC3C /* AppDelegate.swift in Sources */,
 				3CCEC1302709F6B600AFAC3C /* Coordinator.swift in Sources */,
 				3CCEC14A270A2C5200AFAC3C /* DecoderProtocol.swift in Sources */,
+				3CCEC157270A4B1500AFAC3C /* UsersViewModel.swift in Sources */,
 				3CCEC13E270A042900AFAC3C /* NetworkRequestable.swift in Sources */,
 				3CCEC13C270A009500AFAC3C /* RequestMehod.swift in Sources */,
 				3CCEC1352709FC2D00AFAC3C /* NetworkProvider.swift in Sources */,
-				3CCEC150270A464E00AFAC3C /* UsersServiceInterface.swift in Sources */,
+				3CCEC150270A464E00AFAC3C /* UsersServiceProtocol.swift in Sources */,
 				3CCEC14E270A413E00AFAC3C /* NetworkProviderError.swift in Sources */,
 				3CCEC152270A46D400AFAC3C /* Repository.swift in Sources */,
 				3CCEC1372709FF0800AFAC3C /* RequestEndpoint.swift in Sources */,
 				3CCEC145270A271B00AFAC3C /* User.swift in Sources */,
+				3CCEC159270A4B5900AFAC3C /* UsersViewModelProtocol.swift in Sources */,
 				3CCEC148270A2B1500AFAC3C /* NetworkDecoder.swift in Sources */,
 				3CCEC1392709FF2800AFAC3C /* UsersEndpoint.swift in Sources */,
 			);

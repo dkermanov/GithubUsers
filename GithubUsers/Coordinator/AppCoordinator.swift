@@ -26,7 +26,8 @@ public final class AppCoordinator: Coordinator {
     }
     
     private func pushGithubUsers() {
-        let vc = GithubUsersViewController()
+        let vm = UsersViewModel(UsersService())
+        let vc = UsersViewController(vm)
         navigationController.pushViewController(
             vc,
             animated: false
