@@ -31,6 +31,9 @@
 		3CCEC157270A4B1500AFAC3C /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC156270A4B1500AFAC3C /* UsersViewModel.swift */; };
 		3CCEC159270A4B5900AFAC3C /* UsersViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC158270A4B5900AFAC3C /* UsersViewModelProtocol.swift */; };
 		3CCEC15B270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC15A270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift */; };
+		3CCEC160270A64BC00AFAC3C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC15F270A64BC00AFAC3C /* UserCell.swift */; };
+		3CCEC163270A676E00AFAC3C /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC162270A676E00AFAC3C /* UserCellViewModel.swift */; };
+		3CCEC165270A680600AFAC3C /* UserCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC164270A680600AFAC3C /* UserCellViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		3CCEC156270A4B1500AFAC3C /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		3CCEC158270A4B5900AFAC3C /* UsersViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelProtocol.swift; sourceTree = "<group>"; };
 		3CCEC15A270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		3CCEC15F270A64BC00AFAC3C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		3CCEC162270A676E00AFAC3C /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
+		3CCEC164270A680600AFAC3C /* UserCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +180,8 @@
 		3CCEC153270A4A7500AFAC3C /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3CCEC154270A4A8A00AFAC3C /* Users */,
+				3CCEC15D270A648000AFAC3C /* Views */,
+				3CCEC15C270A646C00AFAC3C /* Controllers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -194,6 +201,40 @@
 			children = (
 				3CCEC156270A4B1500AFAC3C /* UsersViewModel.swift */,
 				3CCEC158270A4B5900AFAC3C /* UsersViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3CCEC15C270A646C00AFAC3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC154270A4A8A00AFAC3C /* Users */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CCEC15D270A648000AFAC3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC15E270A649E00AFAC3C /* UserCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3CCEC15E270A649E00AFAC3C /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC161270A674B00AFAC3C /* ViewModel */,
+				3CCEC15F270A64BC00AFAC3C /* UserCell.swift */,
+			);
+			path = UserCell;
+			sourceTree = "<group>";
+		};
+		3CCEC161270A674B00AFAC3C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC162270A676E00AFAC3C /* UserCellViewModel.swift */,
+				3CCEC164270A680600AFAC3C /* UserCellViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -280,6 +321,7 @@
 				3CCEC15B270A5F1200AFAC3C /* UsersViewController+UITableViewDataSource.swift in Sources */,
 				3CCEC14C270A332300AFAC3C /* UsersServiceError.swift in Sources */,
 				3CCEC1172709DA5A00AFAC3C /* UsersViewController.swift in Sources */,
+				3CCEC163270A676E00AFAC3C /* UserCellViewModel.swift in Sources */,
 				3CCEC1132709DA5A00AFAC3C /* AppDelegate.swift in Sources */,
 				3CCEC1302709F6B600AFAC3C /* Coordinator.swift in Sources */,
 				3CCEC14A270A2C5200AFAC3C /* DecoderProtocol.swift in Sources */,
@@ -291,10 +333,12 @@
 				3CCEC14E270A413E00AFAC3C /* NetworkProviderError.swift in Sources */,
 				3CCEC152270A46D400AFAC3C /* Repository.swift in Sources */,
 				3CCEC1372709FF0800AFAC3C /* RequestEndpoint.swift in Sources */,
+				3CCEC160270A64BC00AFAC3C /* UserCell.swift in Sources */,
 				3CCEC145270A271B00AFAC3C /* User.swift in Sources */,
 				3CCEC159270A4B5900AFAC3C /* UsersViewModelProtocol.swift in Sources */,
 				3CCEC148270A2B1500AFAC3C /* NetworkDecoder.swift in Sources */,
 				3CCEC1392709FF2800AFAC3C /* UsersEndpoint.swift in Sources */,
+				3CCEC165270A680600AFAC3C /* UserCellViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

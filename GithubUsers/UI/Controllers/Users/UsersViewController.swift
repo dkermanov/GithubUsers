@@ -31,12 +31,12 @@ class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupUI()
+        setup()
     }
     
     // MARK: - Functions: UI
 
-    private func setupUI() {
+    private func setup() {
         title = "Github Users"
         view.backgroundColor = .white
         
@@ -45,15 +45,27 @@ class UsersViewController: UIViewController {
     
     private func setupTableView() {
         let tableView = UITableView()
+        tableView.register(
+            UserCell.self,
+            forCellReuseIdentifier: UserCell.reuseIdentifier
+        )
         tableView.dataSource = self
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            tableView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor
+            ),
+            tableView.leadingAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.leadingAnchor
+            ),
+            tableView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor
+            ),
+            tableView.trailingAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.trailingAnchor
+            )
         ])
         
         viewModel.getUsers {

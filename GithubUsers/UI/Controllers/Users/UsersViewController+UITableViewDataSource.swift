@@ -22,10 +22,16 @@ extension UsersViewController: UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        guard let item = viewModel.itemViewModel(at: indexPath) else {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: UserCell.reuseIdentifier
+        ) as? UserCell else {
             return UITableViewCell()
         }
         
-        return UITableViewCell()
+        if let itemViewModel = viewModel.itemViewModel(at: indexPath) {
+            cell.populate(with: itemViewModel)
+        }
+        
+        return cell
     }
 }

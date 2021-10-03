@@ -13,7 +13,7 @@ public final class UsersViewModel: UsersViewModelProtocol {
 
     private let service: UsersServiceProtocol
     
-    private var dataSource: [User]
+    private var dataSource: [UserCellViewModelProtocol]
 
     private let disposeBag: DisposeBag
         
@@ -31,7 +31,7 @@ public final class UsersViewModel: UsersViewModelProtocol {
         return dataSource.count
     }
     
-    public func itemViewModel(at indexPath: IndexPath) -> User? {
+    public func itemViewModel(at indexPath: IndexPath) -> UserCellViewModelProtocol? {
         guard dataSource.indices.contains(indexPath.row) else {
             return nil
         }
@@ -44,7 +44,7 @@ public final class UsersViewModel: UsersViewModelProtocol {
             .getUsers()
             .observe(on: MainScheduler.instance)
             .subscribe(onSuccess: { users in
-                self.dataSource = users
+                self.dataSource = users.map { UserCellViewModel($0) }
                 completion?()
             })
             .disposed(by: disposeBag)

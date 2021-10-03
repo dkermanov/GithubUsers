@@ -13,7 +13,7 @@ public protocol UsersViewModelProtocol {
 
     func numberOfRows(in section: Int) -> Int
     
-    func itemViewModel(at indexPath: IndexPath) -> User?
+    func itemViewModel(at indexPath: IndexPath) -> UserCellViewModelProtocol?
     
     func getUsers(completion: (() -> Void)?)
 }
