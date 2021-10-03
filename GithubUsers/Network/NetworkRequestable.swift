@@ -6,14 +6,17 @@
 //
 
 import Foundation
-import RxSwift
 
 public protocol NetworkRequestable {
     // MARK: - Constants
-
-    typealias RequestResult = Result<Data?, Error>
     
+    typealias RequestCompletion = (Result<Data?, Error>) -> Void
+
     // MARK: - Functions
     
-    func request(_ endpoint: RequestEndpoint) -> Single<RequestResult>
+    @discardableResult
+    func request(
+        _ endpoint: RequestEndpoint,
+        _ completion: @escaping RequestCompletion
+    ) -> URLSessionDataTask
 }

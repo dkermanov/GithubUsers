@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RxSwift
 
 public final class NetworkProvider: NetworkRequestable {
     // MARK: - Properties
@@ -21,21 +20,24 @@ public final class NetworkProvider: NetworkRequestable {
     
     // MARK: - Functions
     
-    public func request(_ endpoint: RequestEndpoint) -> Single<RequestResult> {
-        Single.create { [weak session] observer in
-            
-            var request = URLRequest(url: endpoint.baseURL)
-            request.httpMethod = endpoint.method.rawValue
+    @discardableResult
+    public func request(
+        _ endpoint: RequestEndpoint,
+        _ completion: @escaping RequestCompletion
+    ) -> URLSessionDataTask {
+        var request = URLRequest(url: endpoint.baseURL)
+        request.httpMethod = endpoint.method.rawValue
 
-            let task = session?.dataTask(with: request) { data, _, error in
-                print(data ?? "")
-            }
-            
-            task?.resume()
-            
-            return Disposables.create {
-                task?.cancel()
+        let task = session.dataTask(with: request) { data, _, error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(data))
             }
         }
+        
+        task.resume()
+        
+        return task
     }
 }
