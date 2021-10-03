@@ -17,6 +17,7 @@ public final class AppCoordinator: Coordinator {
 
     public init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Functions
