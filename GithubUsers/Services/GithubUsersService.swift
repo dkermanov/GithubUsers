@@ -12,25 +12,30 @@ public final class GithubUsersService {
 
     private let network: NetworkRequestable
     
+    private let decoder: DecoderProtocol
+
     // MARK: - Initializer
 
-    public init(_ network: NetworkRequestable = NetworkProvider()) {
+    public init(
+        network: NetworkRequestable = NetworkProvider(),
+        decoder: DecoderProtocol = NetworkDecoder()
+    ) {
         self.network = network
+        self.decoder = decoder
     }
 
     // MARK: - Functions
 
     public func getUsers() {
-        network.request(GithubUsersEndpoint.users) { result in
+        network.request(GithubUsersEndpoint.users) { [decoder] result in
             switch result {
             case let .success(data):
                 guard let data = data else {
                     return // TODO: throw error here
                 }
                 
-                let decoder = JSONDecoder()
                 do {
-                    let users = try decoder.decode([GithubUser].self, from: data)
+                    let users: [GithubUser] = try decoder.decode(from: data)
                     print(users)
                 } catch {
                     print(error)
