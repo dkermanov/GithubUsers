@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		3CCEC1132709DA5A00AFAC3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC1122709DA5A00AFAC3C /* AppDelegate.swift */; };
-		3CCEC1172709DA5A00AFAC3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC1162709DA5A00AFAC3C /* ViewController.swift */; };
+		3CCEC1172709DA5A00AFAC3C /* GithubUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC1162709DA5A00AFAC3C /* GithubUsersViewController.swift */; };
 		3CCEC11F2709DA6100AFAC3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCEC11D2709DA6100AFAC3C /* LaunchScreen.storyboard */; };
 		3CCEC1292709F40E00AFAC3C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3CCEC1282709F40E00AFAC3C /* RxCocoa */; };
 		3CCEC12B2709F40E00AFAC3C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 3CCEC12A2709F40E00AFAC3C /* RxRelay */; };
 		3CCEC12D2709F40E00AFAC3C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CCEC12C2709F40E00AFAC3C /* RxSwift */; };
+		3CCEC1302709F6B600AFAC3C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC12F2709F6B600AFAC3C /* Coordinator.swift */; };
+		3CCEC1322709F72500AFAC3C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC1312709F72500AFAC3C /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CCEC10F2709DA5A00AFAC3C /* GithubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCEC1122709DA5A00AFAC3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CCEC1162709DA5A00AFAC3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CCEC1162709DA5A00AFAC3C /* GithubUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersViewController.swift; sourceTree = "<group>"; };
 		3CCEC11E2709DA6100AFAC3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCEC1202709DA6100AFAC3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CCEC12F2709F6B600AFAC3C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3CCEC1312709F72500AFAC3C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,10 @@
 		3CCEC1112709DA5A00AFAC3C /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				3CCEC12E2709F66800AFAC3C /* Coordinator */,
 				3CCEC1262709DF4A00AFAC3C /* Resources */,
 				3CCEC1122709DA5A00AFAC3C /* AppDelegate.swift */,
-				3CCEC1162709DA5A00AFAC3C /* ViewController.swift */,
+				3CCEC1162709DA5A00AFAC3C /* GithubUsersViewController.swift */,
 			);
 			path = GithubUsers;
 			sourceTree = "<group>";
@@ -70,6 +75,15 @@
 				3CCEC1202709DA6100AFAC3C /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CCEC12E2709F66800AFAC3C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC12F2709F6B600AFAC3C /* Coordinator.swift */,
+				3CCEC1312709F72500AFAC3C /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCEC1172709DA5A00AFAC3C /* ViewController.swift in Sources */,
+				3CCEC1322709F72500AFAC3C /* AppCoordinator.swift in Sources */,
+				3CCEC1172709DA5A00AFAC3C /* GithubUsersViewController.swift in Sources */,
 				3CCEC1132709DA5A00AFAC3C /* AppDelegate.swift in Sources */,
+				3CCEC1302709F6B600AFAC3C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
