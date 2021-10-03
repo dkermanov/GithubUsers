@@ -12,4 +12,6 @@ public protocol UsersServiceInterface {
     // MARK: - Functions
 
     func getUsers() -> Single<[User]>
+    
+    func getRepositories(for userName: String) -> Single<[Repository]>
 }

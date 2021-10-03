@@ -27,6 +27,7 @@
 		3CCEC14C270A332300AFAC3C /* UsersServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14B270A332300AFAC3C /* UsersServiceError.swift */; };
 		3CCEC14E270A413E00AFAC3C /* NetworkProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14D270A413E00AFAC3C /* NetworkProviderError.swift */; };
 		3CCEC150270A464E00AFAC3C /* UsersServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14F270A464E00AFAC3C /* UsersServiceInterface.swift */; };
+		3CCEC152270A46D400AFAC3C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC151270A46D400AFAC3C /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		3CCEC14B270A332300AFAC3C /* UsersServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServiceError.swift; sourceTree = "<group>"; };
 		3CCEC14D270A413E00AFAC3C /* NetworkProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderError.swift; sourceTree = "<group>"; };
 		3CCEC14F270A464E00AFAC3C /* UsersServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServiceInterface.swift; sourceTree = "<group>"; };
+		3CCEC151270A46D400AFAC3C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				3CCEC146270A2AE600AFAC3C /* Decoder */,
 				3CCEC144270A271B00AFAC3C /* User.swift */,
+				3CCEC151270A46D400AFAC3C /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				3CCEC1352709FC2D00AFAC3C /* NetworkProvider.swift in Sources */,
 				3CCEC150270A464E00AFAC3C /* UsersServiceInterface.swift in Sources */,
 				3CCEC14E270A413E00AFAC3C /* NetworkProviderError.swift in Sources */,
+				3CCEC152270A46D400AFAC3C /* Repository.swift in Sources */,
 				3CCEC1372709FF0800AFAC3C /* RequestEndpoint.swift in Sources */,
 				3CCEC145270A271B00AFAC3C /* User.swift in Sources */,
 				3CCEC148270A2B1500AFAC3C /* NetworkDecoder.swift in Sources */,

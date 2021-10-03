@@ -12,6 +12,8 @@ public enum UsersEndpoint: RequestEndpoint {
 
     case users
     
+    case repositories(_ userName: String)
+    
     // MARK: - Properties
 
     public var host: String {
@@ -22,6 +24,8 @@ public enum UsersEndpoint: RequestEndpoint {
         switch self {
         case .users:
             return "users"
+        case let .repositories(userName):
+            return "users/\(userName)/repos"
         }
     }
     

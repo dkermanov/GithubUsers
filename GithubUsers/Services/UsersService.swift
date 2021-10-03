@@ -28,10 +28,14 @@ public final class UsersService: UsersServiceInterface {
     // MARK: - Functions
 
     public func getUsers() -> Single<[User]> {
-        decode(UsersEndpoint.users)
+        requestAndDecode(UsersEndpoint.users)
     }
     
-    private func decode<DecodableObject: Decodable>(
+    public func getRepositories(for userName: String) -> Single<[Repository]> {
+        requestAndDecode(UsersEndpoint.repositories(userName))
+    }
+
+    private func requestAndDecode<DecodableObject: Decodable>(
         _ endpoint: RequestEndpoint
     ) -> Single<DecodableObject> {
         network
