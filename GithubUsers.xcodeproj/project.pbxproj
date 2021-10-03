@@ -23,7 +23,8 @@
 		3CCEC142270A245000AFAC3C /* GithubUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC141270A245000AFAC3C /* GithubUsersService.swift */; };
 		3CCEC145270A271B00AFAC3C /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC144270A271B00AFAC3C /* GithubUser.swift */; };
 		3CCEC148270A2B1500AFAC3C /* NetworkDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC147270A2B1500AFAC3C /* NetworkDecoder.swift */; };
-		3CCEC14A270A2C5200AFAC3C /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC149270A2C5200AFAC3C /* Decodable.swift */; };
+		3CCEC14A270A2C5200AFAC3C /* DecoderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC149270A2C5200AFAC3C /* DecoderProtocol.swift */; };
+		3CCEC14C270A332300AFAC3C /* GithubUsersServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC14B270A332300AFAC3C /* GithubUsersServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,8 @@
 		3CCEC141270A245000AFAC3C /* GithubUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersService.swift; sourceTree = "<group>"; };
 		3CCEC144270A271B00AFAC3C /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		3CCEC147270A2B1500AFAC3C /* NetworkDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDecoder.swift; sourceTree = "<group>"; };
-		3CCEC149270A2C5200AFAC3C /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		3CCEC149270A2C5200AFAC3C /* DecoderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderProtocol.swift; sourceTree = "<group>"; };
+		3CCEC14B270A332300AFAC3C /* GithubUsersServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCEC141270A245000AFAC3C /* GithubUsersService.swift */,
+				3CCEC14B270A332300AFAC3C /* GithubUsersServiceError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -148,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCEC147270A2B1500AFAC3C /* NetworkDecoder.swift */,
-				3CCEC149270A2C5200AFAC3C /* Decodable.swift */,
+				3CCEC149270A2C5200AFAC3C /* DecoderProtocol.swift */,
 			);
 			path = Decoder;
 			sourceTree = "<group>";
@@ -232,10 +235,11 @@
 			files = (
 				3CCEC1322709F72500AFAC3C /* AppCoordinator.swift in Sources */,
 				3CCEC142270A245000AFAC3C /* GithubUsersService.swift in Sources */,
+				3CCEC14C270A332300AFAC3C /* GithubUsersServiceError.swift in Sources */,
 				3CCEC1172709DA5A00AFAC3C /* GithubUsersViewController.swift in Sources */,
 				3CCEC1132709DA5A00AFAC3C /* AppDelegate.swift in Sources */,
 				3CCEC1302709F6B600AFAC3C /* Coordinator.swift in Sources */,
-				3CCEC14A270A2C5200AFAC3C /* Decodable.swift in Sources */,
+				3CCEC14A270A2C5200AFAC3C /* DecoderProtocol.swift in Sources */,
 				3CCEC13E270A042900AFAC3C /* NetworkRequestable.swift in Sources */,
 				3CCEC13C270A009500AFAC3C /* RequestMehod.swift in Sources */,
 				3CCEC1352709FC2D00AFAC3C /* NetworkProvider.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  Decodable.swift
+//  DecoderProtocol.swift
 //  GithubUsers
 //
 //  Created by Dmitriy Kermanov on 03.10.21.

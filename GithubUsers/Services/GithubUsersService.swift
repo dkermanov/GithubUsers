@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 public final class GithubUsersService {
     // MARK: - Properties
@@ -26,23 +27,29 @@ public final class GithubUsersService {
 
     // MARK: - Functions
 
-    public func getUsers() {
-        network.request(GithubUsersEndpoint.users) { [decoder] result in
-            switch result {
-            case let .success(data):
-                guard let data = data else {
-                    return // TODO: throw error here
+    public func getUsers() -> Single<String> {
+        Single.create { [network, decoder] observer in
+            let task = network.request(GithubUsersEndpoint.users) { result in
+                switch result {
+                case let .success(data):
+                    guard let data = data else {
+                        return observer(.failure(GithubUsersServiceError.emptyResponse))
+                    }
+
+                    do {
+                        let users: [GithubUser] = try decoder.decode(from: data)
+                        print(users)
+                    } catch {
+                        observer(.failure(GithubUsersServiceError.decodingFailure))
+                    }
+
+                case let .failure(error):
+                    observer(.failure(GithubUsersServiceError.custom(error)))
                 }
-                
-                do {
-                    let users: [GithubUser] = try decoder.decode(from: data)
-                    print(users)
-                } catch {
-                    print(error)
-                }
-                
-            case let .failure(error):
-                print(error)
+            }
+            
+            return Disposables.create {
+                task.cancel()
             }
         }
     }
