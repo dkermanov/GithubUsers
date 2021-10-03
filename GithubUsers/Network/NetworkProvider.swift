@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RxSwift
 
-public final class NetworkProvider {
+public final class NetworkProvider: NetworkRequestable {
     // MARK: - Properties
 
     private let session: URLSession
@@ -20,14 +21,22 @@ public final class NetworkProvider {
     
     // MARK: - Functions
     
-    public func request(endpoint: RequestEndpoint) {
-        var request = URLRequest(url: endpoint.baseURL)
-        request.httpMethod = endpoint.method.rawValue
+    public func request(_ endpoint: RequestEndpoint) -> Single<RequestResult> {
+        Single.create { [session] observer in
+            
+            var request = URLRequest(url: endpoint.baseURL)
+            request.httpMethod = endpoint.method.rawValue
 
-        session
-            .dataTask(with: request) { data, response, err in
-                print(data ?? "")
+            let task: URLSessionDataTask = session
+                .dataTask(with: request) { data, _, error in
+                    print(data ?? "")
+                }
+            
+            task.resume()
+            
+            return Disposables.create {
+                task.cancel()
             }
-            .resume()
+        }
     }
 }
