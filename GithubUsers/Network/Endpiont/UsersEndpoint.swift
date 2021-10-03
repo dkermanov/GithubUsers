@@ -1,5 +1,5 @@
 //
-//  GithubUsersEndpoint.swift
+//  UsersEndpoint.swift
 //  GithubUsers
 //
 //  Created by Dmitriy Kermanov on 03.10.21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum GithubUsersEndpoint: RequestEndpoint {
+public enum UsersEndpoint: RequestEndpoint {
     // MARK: - Cases
 
     case users

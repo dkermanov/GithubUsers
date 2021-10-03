@@ -1,5 +1,5 @@
 //
-//  GithubUser.swift
+//  User.swift
 //  GithubUsers
 //
 //  Created by Dmitriy Kermanov on 03.10.21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GithubUser: Identifiable, Decodable {
+public struct User: Identifiable, Decodable {
     // MARK: - Constants
 
     private enum CodingKeys: String, CodingKey {
